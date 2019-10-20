@@ -226,43 +226,42 @@ namespace KeeTheme
 
 		private void Apply(TreeView treeView)
 		{
-			treeView.BorderStyle = _theme.TreeView.BorderStyle;
-			treeView.BackColor = _theme.TreeView.BackColor;
-			treeView.DrawMode = _theme.TreeViewDrawMode;
+			//treeView.BorderStyle = _theme.TreeView.BorderStyle;
+			//treeView.BackColor = _theme.TreeView.BackColor;
+			//treeView.DrawMode = _theme.TreeViewDrawMode;
 
-			treeView.DrawNode -= HandleTreeViewDrawNode;
-			treeView.DrawNode += HandleTreeViewDrawNode;
+			//treeView.DrawNode -= HandleTreeViewDrawNode;
+			//treeView.DrawNode += HandleTreeViewDrawNode;
 		}
 
 		private void HandleTreeViewDrawNode(object sender, DrawTreeNodeEventArgs e)
 		{
-			e.DrawDefault = true;
-			e.Node.ForeColor = e.State == TreeNodeStates.Selected
-				? _theme.TreeView.SelectionColor
-				: _theme.TreeView.ForeColor;
+			//e.DrawDefault = true;
+			//e.Node.ForeColor = e.State == TreeNodeStates.Selected
+			//	? _theme.TreeView.SelectionColor
+			//	: _theme.TreeView.ForeColor;
 		}
 
 		private void Apply(RichTextBox richTextBox)
 		{
-			var decorator = richTextBox.Parent as RichTextBoxDecorator;
-			if (decorator == null)
-			{
-				decorator = new RichTextBoxDecorator(richTextBox, _theme);
-			}
+			//var decorator = richTextBox.Parent as RichTextBoxDecorator;
+			//if (decorator == null)
+			//{
+			//	decorator = new RichTextBoxDecorator(richTextBox, _theme);
+			//}
 
-			decorator.EnableTheme(_enabled, _theme);
-
+			//decorator.EnableTheme(_enabled, _theme);
 		}
 
 		private void Apply(ListView listView)
 		{
-			var decorator = listView.Controls.OfType<ListViewDecorator>().FirstOrDefault();
-			if (decorator == null)
-			{
-				decorator = new ListViewDecorator(listView , _theme);
-			}
+			//var decorator = listView.Controls.OfType<ListViewDecorator>().FirstOrDefault();
+			//if (decorator == null)
+			//{
+			//	decorator = new ListViewDecorator(listView , _theme);
+			//}
 
-			decorator.EnableTheme(_enabled, _theme);
+			//decorator.EnableTheme(_enabled, _theme);
 		}
 
 	}

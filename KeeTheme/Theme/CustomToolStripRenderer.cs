@@ -33,13 +33,16 @@ namespace KeeTheme.Theme
 		protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e)
 		{
 			var ms = e.ToolStrip as MenuStrip;
-			if (ms != null) {
-				if (_menuBackgroundBrush == null) {
+			if (ms != null) 
+			{
+				if (_menuBackgroundBrush == null) 
+				{
 					_menuBackgroundBrush = new SolidBrush(_customTheme.MenuItem.BackColor);
 				}
-
 				e.Graphics.FillRectangle(_menuBackgroundBrush, e.AffectedBounds);
-			} else {
+			} 
+			else 
+			{
 				base.OnRenderToolStripBackground(e);
 			}
 		}
